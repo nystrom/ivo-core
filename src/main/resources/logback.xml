@@ -1,0 +1,17 @@
+<configuration scan="true" scanPeriod="2 seconds">
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%cyan(%d{HH:mm:ss.SSS}) %highlight(%-5level) %blue(%logger{36}): %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- passes, in order more or less -->
+  <logger name="IvoEval" level="debug" />
+
+  <root level="warn">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
